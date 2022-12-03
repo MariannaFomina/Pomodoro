@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro&family=Rubik+Mono+One&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+h1, h2 {
+    font-family: 'Rubik Mono One';
+    margin: 0;
+}
+
+h2 {
+    font-size: 32px;
+}
+
+p, li {
+    font-family: 'Anonymous Pro';
+    font-size: 18px;
+}
+
+.container {
+    width: 960px;
+    margin: 0 auto;
+}
+
+section {
+    margin-bottom: 100px;
+}
+
+/* -----header----- */
+
+header {
+    background-color: white;
+    position: sticky;
+    top: 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between
+}
+
+header li {
+    list-style: none;
+    padding-left: 30px;
+    font-size: 24px;
+}
+
+header ul {
+    display: flex;
+    align-items: center;
+}
+
+header img {
+    width: 50px;
+    height: 50px;
+}
+
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: #CE492D;
+}
+
+/* -----first-block----- */
+
+h1 {
+    font-size: 48px;
+}
+
+#first-block {
+    background-color: #CE492D;
+    color: white;
+}
+
+#first-block {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    background-image: url(./images/Time_management_bro.svg);
+    background-repeat: no-repeat;
+    background-position: centr right;
+    background-size: 500px;
+}
+
+.first-block-content {
+    width: 550px;
+}
+
+/* -----basic----- */
+
+#basic .container {
+    display: flex;
+    align-items: center;
+}
+
+.basic-content {
+    background-color: #EDE7E5;
+    height: 400pt;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 50px;
+    margin-left: 20px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+
+/* -----tools----- */
+
+#tools .container {
+    display: flex;
+    align-items: center;
+}
+
+/* -----rules---- */
+
+#rules .container {
+    display: flex;
+    align-items: center;
+    background-color: #EDE7E5;
+    border-radius: 30px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+    padding: 30px;
+    }
+
+#rules img {
+    margin-right: 30px;
+}
+
+/* -----FAQ----- */
+
+#FAQ .container {
+    display: flex;
+    align-items: center;
+    background-color: #EDE7E5;
+    border-radius: 30px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+    padding: 30px;
+}
+
+#FAQ * {
+    margin: 0;
+    padding: 0;
+}
+
+#FAQ .section {
+    width: 960px;
+    margin: 0 auto;
+}
+
+#FAQ h2, h3, p {
+    color: rgb(53, 53, 53);
+}
+
+#FAQ h2 {
+    font-family: 'Rubik Mono One';
+    font-weight: 100;
+    font-size: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#FAQ h3 {
+    font-family: 'Anonymous Pro';
+    font-size: 3rem;
+}
+
+#FAQ p {
+    font-family: 'Anonymous Pro';
+    font-size: 1.5rem;
+    padding: 1.5rem;
+}
+
+.faq {
+    margin-top: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgb(53, 53, 53);
+    cursor: pointer;
+}
+
+.question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1s ease-in;
+}
+
+.faq.active .answer {
+    /* max-height: max-content; */
+    max-height: 300px;
+animation: fade 1s ease-in-out;
+}
+
+.faq.active svg {
+    transform: rotate(180deg);
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: (0px);
+    }
+}
